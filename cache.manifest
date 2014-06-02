@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# Cache manifest version 1.0
+
+CACHE:
+lib/jquery/jquery.min.js
+lib/underscore-min.js
+lib/backbone-min.js
+
+NETWORK:
+*
