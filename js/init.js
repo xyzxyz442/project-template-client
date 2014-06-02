@@ -2,6 +2,8 @@ require.config({
 	baseUrl: '',
 	
 	paths: {
+		app: 'js/app',
+		
 		jquery: 'lib/jquery/jquery.min',
 		backbone: 'lib/backbone',
 		underscore: 'lib/underscore-min',
@@ -26,5 +28,10 @@ require.config({
 });
 
 require(['jquery', 'backbone'], function($, Backbone) {
-	// initialize
+	require(['js/app', 'js/config'], function(App, Config) {
+		Application = App;
+		Application.config = Config;
+		
+		Application.initialize();
+	});
 });
